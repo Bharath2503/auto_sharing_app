@@ -1,0 +1,25 @@
+
+
+Frontend Developers:
+    Deepan Kumar
+    Bharath
+    Dhanush
+
+Middleend Developers:
+    Logesh
+
+Backend Developers:
+    Lokesh
+    Aathavan
+
+
+
+Backend Routes:
+   home: https:lokesaathav.com/ (GET)
+   newslot: https:lokesaathav.com/newslot (POST)
+   joinslot: https:lokesaathav.com/<slotid>/<userid> (GET)
+   leaveslot: https:lokesaathav.com/<slotid>/<userid>/leave (GET/DELETE)
+   leaveslot: https:lokesaathav.com/<slotid>/delete (GET/DELETE)
+
+
+
