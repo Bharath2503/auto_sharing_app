@@ -1,16 +1,17 @@
 import '../css/App.css';
-import {Route,Routes} from 'react-dom'
-import {BrowserRouter} from 'react-dom'
-import Home from './Home';
+import TextField from './textfield';
+import React from 'react'
 
 function App() {
+  const handleSubmit=(e)=>{
+    console.log(e.target.value)
+  }
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/home" element={<Home/>}/>
-        </Routes>
-      </BrowserRouter>
+    <div className="App">
+    
+      <h1>Development process is on going ........</h1>
+      <TextField  name="test" id="name" onchange={handleSubmit} padding='10px'/>
+      
     </div>
   );
 }
