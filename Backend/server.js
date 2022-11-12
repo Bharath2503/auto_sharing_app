@@ -1,6 +1,6 @@
 const express = require("express")
 const mongoose = require("mongoose")
-const { newslot, slots, viewslot } = require("./controllers/slot")
+const { newslot, slots, viewslot, deleteslot, join, leave } = require("./controllers/slot")
 
 const app = express()
 
@@ -20,6 +20,12 @@ app.post("/newslot",newslot);
 app.get("/slots",slots);
 
 app.get("/viewslot/:id",viewslot);
+
+app.get("/deleteslot/:id",deleteslot);
+
+app.post("/join/:id",join);
+
+// app.post("/leave/:id",leave);
 
 app.listen(4000,()=>{
     console.log("Port 4000")
