@@ -17,9 +17,11 @@ Backend Developers:
 Backend Routes:
    home: https:lokesaathav.com/ (GET)
    newslot: https:lokesaathav.com/newslot (POST)
+   slots: https:lokesaathav.com/slots(GET)
+   viewslot:https:lokesaathav.com/<slotid>/viewslot(GET)
    joinslot: https:lokesaathav.com/<slotid>/<userid> (GET)
    leaveslot: https:lokesaathav.com/<slotid>/<userid>/leave (GET/DELETE)
-   leaveslot: https:lokesaathav.com/<slotid>/delete (GET/DELETE)
+   deleteslot: https:lokesaathav.com/<slotid>/delete (GET/DELETE)
 
 
 

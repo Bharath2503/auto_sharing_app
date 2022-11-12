@@ -1,7 +1,7 @@
-const mongoose = require("mongoose")
-const Schema = mongoose.Schema()
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const SlotSchema = new Schema({
+const slotSchema = new Schema({
     time:{
         type:String,
         required:true
@@ -9,18 +9,15 @@ const SlotSchema = new Schema({
     capacity:{
         type:String,
         required:true
-    },
+    },  
     m1:{
-        type:String,
-        required:true
+        type:String
     },
     m2:{
         type:String,
-        required:true
     },
     m3:{
         type:String,
-        required:true
     },
     m4:{
         type:String
