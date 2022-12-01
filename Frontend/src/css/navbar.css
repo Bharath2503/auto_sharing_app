@@ -27,7 +27,7 @@ Navbar{
 .me-auto{
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
 }
 
 .mobile-menu {
@@ -64,4 +64,10 @@ Navbar{
     transform: translate3d(0, 0.5em, 0);
     transform-origin: bottom center;
     transform: scaleX(1);
+}
+
+/* nav image */
+img{
+    width: 100px;
+    height: 100px;
 }
