@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 import "../css/SlotDetails.css";
 function SlotDetails() {
     return (
@@ -8,7 +8,15 @@ function SlotDetails() {
             <h6 className="SlotDetails-owner"><b>Created by:</b></h6>
             <div className="SlotMembers">
                 <h5 className="SlotMembers-Title">Slot Members</h5>
+                <div className='Members-Email'>
+                <ul>
+                    <li></li>
+                </ul>
             </div>
+            </div>
+            <h5 className='SlotMembers-Number'>( /4)</h5>
+            <Button type="submit" variant='danger' className='SlotLeaveButton'>Leave</Button>
+            
             </div>
         </div>
     )
