@@ -7,7 +7,7 @@ import SlotBook from './components/SlotBooking';
 import Slot from './components/CreateSlot';
 import Home from './components/Home';
 import About from './components/About';
-
+import SlotDetails from "./components/SlotDetails";
 function App() {
   return (
     <div className="App"> 
@@ -18,6 +18,7 @@ function App() {
       <Route path="/slot" element={<Slot/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path="/slotbook" element={<SlotBook/>}/>
+      <Route path="/SlotDetails" element={<SlotDetails/>}/>
     </Routes>
     </BrowserRouter>
     </div>

@@ -2,8 +2,8 @@
 {
     background-color: #D2BA0A;
     color:black;
-    padding-left: 5%;
-    padding-right:5%;
+    padding-left: 8%;
+    padding-right:8%;
     margin-right: 3%;
   
 }
@@ -11,8 +11,8 @@
 {
     background-color: #D2BA0A;
     color:black;
-    padding-left: 5%;
-    padding-right:5%;
+    padding-left: 8%;
+    padding-right:8%;
     margin-right: 3%;
    
 }
@@ -20,44 +20,20 @@
 {
     background-color: white;
     color:black;
-    padding-left: 5%;
-    padding-right:5%;
+    padding-left: 6%;
+    padding-right:6%;
 }
 .create-button:hover
 {
     background-color: white;
     color:black;
-    padding-left: 5%;
-    padding-right:5%;
-}
-.form-control
-{
-    background-color: #C5E23B;
-}
-.form-control:focus
-{
-    background-color: #C5E23B;
+    padding-left: 6%;
+    padding-right:6%;
 }
 
-.form-control ::placeholder
-{
-    color: black;
-}
-.form-group
-{
-    margin-left: 3%;
-    margin-right: 3%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-.card
-{
-    margin-top: 4%;
-}
 .button-margin
 {
-    margin-left: 3%;
-    margin-top: 5%;
-    margin-bottom: 10%;
+    margin-top: 10%;
+    margin-bottom: 20%;
 }
 

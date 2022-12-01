@@ -1,50 +1,58 @@
-.Auth-form-container {
+.FullPage {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 80vh;
-    
-  }
-  
-  .Auth-form {
-    width: 500px;
+}
+
+.Form {
+    width: 600px;
     height: 400px;
     padding-top: 20px;
     padding-bottom: 10px;
-    margin-top: -30px;  
+    margin-top: -30px;
     background-color: #058240;
-    border-radius:3% ;
-  }
-  
-  .Auth-form-content {
+    border-radius: 1%;
+}
+
+.Page-Content {
     padding-left: 12%;
     padding-right: 12%;
     margin-top: 10%;
-  }
-  
-  .Auth-form-title {
+}
+
+.Title {
     text-align: center;
     margin-bottom: 1em;
     margin-top: 5%;
-    font-size: 24px;
-    color: rgb(34, 34, 34);
-    font-weight: 800;
-  }
-  .space{
+    color: white;
+}
+
+.form-control {
     margin-top: 10%;
     background-color: #C5E23B;
-  }
-  .login{
-    margin-top: 5%;
-   background-color:whitesmoke;
-   color: black;
-   justify-content: center;
-   width: 30%;
-   margin-left: 35%;
-  }
-  .login:hover{
-    background-color:whitesmoke;
+}
+.form-control:focus {
+    margin-top: 10%;
+    background-color: #C5E23B;
+}
+
+
+.form-control::placeholder {
     color: black;
-  }
-  
+}
+
+.Login-Button {
+    margin-top: 5%;
+    background-color: whitesmoke;
+    color: black;
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.Login-Button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
