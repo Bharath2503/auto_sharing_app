@@ -6,6 +6,7 @@ import {BrowserRouter ,Routes,Route} from 'react-router-dom';
 import Slot from './components/CreateSlot';
 import Home from './components/Home';
 import About from './components/About';
+import "./css/App.css";
 
 function App() {
   return (
