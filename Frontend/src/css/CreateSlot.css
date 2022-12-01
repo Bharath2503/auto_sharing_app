@@ -1,0 +1,63 @@
+.back-button
+{
+    background-color: #D2BA0A;
+    color:black;
+    padding-left: 5%;
+    padding-right:5%;
+    margin-right: 3%;
+  
+}
+.back-button:hover
+{
+    background-color: #D2BA0A;
+    color:black;
+    padding-left: 5%;
+    padding-right:5%;
+    margin-right: 3%;
+   
+}
+.create-button
+{
+    background-color: white;
+    color:black;
+    padding-left: 5%;
+    padding-right:5%;
+}
+.create-button:hover
+{
+    background-color: white;
+    color:black;
+    padding-left: 5%;
+    padding-right:5%;
+}
+.form-control
+{
+    background-color: #C5E23B;
+}
+.form-control:focus
+{
+    background-color: #C5E23B;
+}
+
+.form-control ::placeholder
+{
+    color: black;
+}
+.form-group
+{
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.card
+{
+    margin-top: 4%;
+}
+.button-margin
+{
+    margin-left: 3%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
