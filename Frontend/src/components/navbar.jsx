@@ -8,7 +8,7 @@ import Image from "../assets/images/auto_clr.png";
 function Header() {
     return (
         <>
-            <Navbar expand="lg">
+            <Navbar expand="sm">
                 <Container>
                     <Navbar.Brand>
                        <img src={Image} alt="auto" />
@@ -19,8 +19,8 @@ function Header() {
                             <Link className="link hover-underline-animation" to="/home">Home</Link>
                             <Link className="link hover-underline-animation" to="/slot">CreateSlot</Link>
                             <Link className="link hover-underline-animation" to="/about">About</Link>
-                        </Nav>
-                        </Navbar.Collapse>
+                        </Nav> 
+                        </Navbar.Collapse> 
                 </Container>
             </Navbar>
             <Outlet />
