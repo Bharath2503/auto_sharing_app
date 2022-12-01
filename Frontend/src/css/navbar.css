@@ -30,7 +30,7 @@
 }
 .hover-underline-animation::after {
     content: ' ';
-    position:static;
+    position: absolute;
     width: auto;
     height: 2.5px;
     bottom: 0;
@@ -47,7 +47,7 @@
 .hover-underline-animation:focus::after{
     opacity:3;
     margin-top: 2px;
-    /* transform: translate3d(0, 0.5em, 0); */
+    transform: translate3d(0, 0.5em, 0);
     transform-origin: bottom center;
     transform: scaleX(1);
 }
