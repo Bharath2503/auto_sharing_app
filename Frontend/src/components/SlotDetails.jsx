@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import "../css/SlotDetails.css";
+import { Link } from 'react-router-dom';
 function SlotDetails() {
     return (
         <div className='SlotDetailsPage'>
@@ -15,7 +16,7 @@ function SlotDetails() {
             </div>
             </div>
             <h5 className='SlotMembers-Number'>( /4)</h5>
-            <Button type="submit" variant='danger' className='SlotLeaveButton'>Leave</Button>
+          <Link to="/SlotBook"><Button type="submit" variant='danger' className='SlotLeaveButton'>Leave</Button></Link>  
             
             </div>
         </div>
