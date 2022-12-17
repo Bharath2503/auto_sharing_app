@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import "../css/SlotDetails.css";
+import "../css/slotdetails.css";
 import { Link } from 'react-router-dom';
 function SlotDetails() {
     return (

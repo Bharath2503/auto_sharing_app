@@ -1,58 +1,87 @@
-.FullPage {
-    display: flex;
+.SlotBook-page {
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 80vh;
-}
-
-.Form {
-    width: 600px;
-    height: 400px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    margin-top: -30px;
+    height: auto;
+    margin-top: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
     background-color: #058240;
-    border-radius: 1%;
+    padding-bottom: 5%;
+    border-radius: 10px 0px 10px 0px;
+    z-index: 0;
 }
 
-.Page-Content {
-    padding-left: 12%;
-    padding-right: 12%;
-    margin-top: 10%;
-}
-
-.Title {
+.slottitle {
     text-align: center;
-    margin-bottom: 1em;
-    margin-top: 5%;
     color: white;
+    padding-top: 2%;
 }
 
-.form-control {
-    margin-top: 10%;
+.slottime {
     background-color: #C5E23B;
+    padding: 1px 10px 0px 10px;
+    border-radius: 10px;
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
 }
-.form-control:focus {
-    margin-top: 10%;
-    background-color: #C5E23B;
+
+.timestyle {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.createdby {
+    font-size: 10px;
+    padding: 1%;
+}
+
+.Slot-Button {
+    height: 25px;
+    width: auto;
+    font-size: small;
+    padding: 2px;
+    float: right;
+}
+
+.Slot-member {
+    float: right;
+}
+
+.slottime-content {
+    padding: 1%;
+    justify-content: center
+}
+
+.btn-circle.btn-lg {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 35px;
+    line-height: 1.33;
 }
 
 
-.form-control::placeholder {
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+    background-color: white;
     color: black;
+    font-weight: bolder;
 }
 
-.Login-Button {
-    margin-top: 5%;
-    background-color: whitesmoke;
-    color: black;
-    justify-content: center;
-    width: 30%;
-    margin-left: 35%;
-}
-
-.Login-Button:hover {
-    background-color: whitesmoke;
-    color: black;
+.plus-btn {
+    float: right;
+    z-index: 1000   ;
+    /* margin-top: 5%; */
+    top:85%;
+    right: 10%;
+    position:absolute;
 }

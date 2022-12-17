@@ -3,21 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 import Header from './components/navbar';
 import {BrowserRouter ,Routes,Route} from 'react-router-dom';
-import SlotBook from './components/SlotBooking';
-import Slot from './components/CreateSlot';
-import Home from './components/Home';
-import About from './components/About';
-import SlotDetails from "./components/SlotDetails";
+import Login from './components/login';
+import Slot from './components/createslot';
+import Home from './components/home';
+import About from './components/about';
+import SlotDetails from "./components/slotdetails";
 function App() {
   return (
     <div className="App"> 
       <BrowserRouter>
        <Header/>
       <Routes>
-      <Route path="/" element={<Home/>} /> 
-      <Route path="/slot" element={<Slot/>}/>
+      <Route path="/login" element={<Login/>} /> 
+      <Route path="/book" element={<Slot/>}/>
       <Route path='/about' element={<About/>}/>
-      <Route path="/slotbook" element={<SlotBook/>}/>
+      <Route path="/" element={<Home/>}/>
       <Route path="/SlotDetails" element={<SlotDetails/>}/>
     </Routes>
     </BrowserRouter>

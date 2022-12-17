@@ -17,7 +17,6 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Link className="link hover-underline-animation" to="/">Home</Link>
-                            <Link className="link hover-underline-animation" to="/SlotBook">Slot Booking</Link>
                             <Link className="link hover-underline-animation" to="/about">About</Link>
                         </Nav> 
                         </Navbar.Collapse> 

@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import moment from "moment"
-import "../css/CreateSlot.css";
+import "../css/createslot.css";
 import { useState } from 'react'
 
 
@@ -28,7 +28,7 @@ function Slot() {
             <Form.Control type="number" max="4" min="0"  placeholder="Max member(limit:4)" className="form-control"  />
           </Form.Group>
           <div className='button-margin'>
-            <Link to="/SlotBook"><Button type="submit" className="back-button">Back</Button></Link>
+            <Link to="/"><Button type="submit" className="back-button">Back</Button></Link>
             <Link to="/SlotDetails"><Button type="submit" className="create-button">Create</Button></Link>
           </div>
         </div>
