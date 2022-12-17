@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import "../css/slotdetails.css";
 import { Link } from 'react-router-dom';
-import 'font-awesome/css/font-awesome.min.css';
+// import 'font-awesome/css/font-awesome.min.css'; 
 function SlotDetails() {
     return (
         <div className='SlotDetailsPage'>

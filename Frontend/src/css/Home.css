@@ -7,7 +7,7 @@
     margin-right: 15%;
     background-color: #058240;
     padding-bottom: 5%;
-    border-radius: 10px 0px 10px 0px;
+    border-radius: 35px 0px 35px 0px;
     z-index: 0;
 }
 
@@ -28,20 +28,18 @@
 }
 
 .timestyle {
-    font-weight: bold;
+    font-weight: 500;
     font-size: larger;
 }
 
 .createdby {
-    font-size: 10px;
+    font-size: 15px;
     padding: 1%;
 }
 
 .Slot-Button {
-    height: 25px;
-    width: auto;
-    font-size: small;
-    padding: 2px;
+    background-color:#222222ed!important;
+    --bs-btn-border-color: #ffffff;
     float: right;
 }
 
@@ -54,29 +52,6 @@
     justify-content: center
 }
 
-.btn-circle.btn-lg {
-    width: 70px;
-    height: 70px;
-    padding: 10px 16px;
-    border-radius: 35px;
-    font-size: 35px;
-    line-height: 1.33;
-}
-
-
-.btn-circle {
-    width: 30px;
-    height: 30px;
-    padding: 6px 0px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
-    background-color: white;
-    color: black;
-    font-weight: bolder;
-}
-
 .plus-btn {
     float: right;
     z-index: 1000   ;
@@ -84,4 +59,14 @@
     top:85%;
     right: 10%;
     position:absolute;
+}
+.btn-circle
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size:200%;
+    background-color: #058240;
+    color: black;
+    font-weight: bolder;
 }
