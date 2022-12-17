@@ -2,26 +2,29 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const slotSchema = new Schema({
-    time:{
-        type:String,
-        required:true
+    time: {
+        type: String,
+        required: true
     },
-    capacity:{
-        type:String,
-        required:true
-    },  
-    m1:{
-        type:String
+    capacity: {
+        type: String,
+        required: true
     },
-    m2:{
-        type:String,
+    email: {
+        type: String,
+        required: true
     },
-    m3:{
-        type:String,
+    members:{ 
+    type:[{
+        type: mongoose.Schema.Types.ObjectId, ref: 'User', 
     },
-    m4:{
-        type:String
-    }
+    ],
+    validate: [limit, 'Array exceeds the limit of 4']
+}
+
 })
 
-module.exports = mongoose.model('Slot',slotSchema);
+function limit(val) {
+    return val.length <= 4;
+  }
+module.exports = mongoose.model('Slot', slotSchema);

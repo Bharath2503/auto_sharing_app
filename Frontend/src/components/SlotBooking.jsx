@@ -6,7 +6,9 @@ import Button from 'react-bootstrap/Button';
 
 function SlotBooking() {
     return (
-        <><div className="SlotBook-page">
+        <>
+        <div className="container">
+        <div className="SlotBook-page">
             <h4 className="slottitle">Slot Timings</h4>
             <div className="slottime">
                 <div className="slottime-content">
@@ -64,11 +66,14 @@ function SlotBooking() {
                     </Row>
                 </div>
             </div>
+
+           
         </div>
-        
-            <div className="plus-btn">
+        <div className="plus-btn">
            <Link to="/slot"> <Button  variant="light" type="button" className="btn btn-default btn-circle btn-lg">+</Button></Link>
             </div>
+            </div>
+            
         </>
     )
 }
