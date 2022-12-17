@@ -8,6 +8,7 @@ import Slot from './components/createslot';
 import Home from './components/home';
 import About from './components/about';
 import SlotDetails from "./components/slotdetails";
+import Signup from './components/signup';
 function App() {
   return (
     <div className="App"> 
@@ -15,10 +16,11 @@ function App() {
        <Header/>
       <Routes>
       <Route path="/login" element={<Login/>} /> 
+      <Route path="/signup" element={<Signup/>} /> 
       <Route path="/book" element={<Slot/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path="/" element={<Home/>}/>
-      <Route path="/SlotDetails" element={<SlotDetails/>}/>
+      <Route path="/SlotDetails/:id" element={<SlotDetails/>}/>
     </Routes>
     </BrowserRouter>
     </div>

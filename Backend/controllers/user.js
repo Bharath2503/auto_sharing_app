@@ -12,7 +12,7 @@ module.exports.signup = async (req, res) => {
         }
         const hashPassword = await bcrypt.hash(password, 12);
         const newUser = new User({ name, rollno, email, gender, phone, category, password: hashPassword })
-        await newUser.save();
+        // await newUser.save();
         const token = jwt.sign({ email: newUser.email, id: newUser._id }, 'token', { expiresIn: '1h' })
         res.status(200).json({ result: newUser, token })
     } catch (err) {

@@ -1,9 +1,11 @@
 const express = require("express")
 const mongoose = require("mongoose")
+const cors= require('cors')
 const { newslot, slots, viewslot, deleteslot, join, leave } = require("./controllers/slot")
 const { signup,login } = require("./controllers/user")
 
 const app = express()
+app.use(cors())
 
 //DB Connection
 // const dburl = "mongodb://localhost:27017/auto"

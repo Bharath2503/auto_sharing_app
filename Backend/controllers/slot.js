@@ -11,17 +11,18 @@ module.exports.newslot = async(req,res)=>{
 
 module.exports.slots = async(req,res)=>{
     var slots = await Slot.find({})
-    res.json(slots)
+    console.log(slots)
+    res.status(200).json(slots)
 }
 
 module.exports.viewslot = async (req,res)=>{
     var slot = await Slot.findById(req.params.slotid).populate('members');
-    res.json(slot)
+    res.status(200).json(slot)
 }
 
 module.exports.deleteslot = async (req,res)=>{
     var slot = await Slot.findByIdAndDelete(req.params.slotid);
-    res.send("Success");
+    res.status(200).json({message:"Success"});
 }
 
 module.exports.join = async(req,res)=>{
@@ -53,7 +54,7 @@ module.exports.join = async(req,res)=>{
         console.log("m4");
     }*/
    await slot.save()
-   res.send("Joined");
+   res.status(200).json({message:"Joined"});
 }
 
 module.exports.leave = async(req,res)=>{
@@ -85,5 +86,5 @@ module.exports.leave = async(req,res)=>{
     //     console.log("m4");
     // }
     await slot.save()
-    res.send("Exited");
+    res.status(200).json({message:"Success"});
 }
