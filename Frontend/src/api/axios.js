@@ -9,6 +9,7 @@ export const allslots=async ()=>{
     return res.data
 };
 export const viewslot=async (data)=>{
+    console.log(data)
     const res= await api.get(`/viewslot/${data}`);
     console.log(res.data)
     return res.data

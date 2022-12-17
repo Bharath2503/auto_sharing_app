@@ -20,7 +20,7 @@ function App() {
       <Route path="/book" element={<Slot/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path="/" element={<Home/>}/>
-      <Route path="/SlotDetails/:id" element={<SlotDetails/>}/>
+      <Route path="/slotdetails/:id" element={<SlotDetails/>}/>
     </Routes>
     </BrowserRouter>
     </div>
