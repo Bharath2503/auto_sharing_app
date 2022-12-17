@@ -1,6 +1,8 @@
 h1{
   text-align: center;
 }
-body{
+html,body{
   background-color: #99CCFF;
+  overflow-x: hidden;
+  max-width: 100%;
 }

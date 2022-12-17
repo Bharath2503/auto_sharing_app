@@ -69,4 +69,8 @@
     background-color: #058240;
     color: black;
     font-weight: bolder;
+    padding: 0%;
+}
+.btn-circle:hover{
+    background-color: #058240;
 }
