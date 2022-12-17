@@ -48,17 +48,58 @@ function SlotBooking() {
                 <Col><Link to={{path:`/SlotDetails/${ele._id}`}} ><Button className="Slot-Button" variant="dark" type="button">View</Button></Link></Col>
               </Row>
             </div>
-          </div>
-          ))}
-     
+            <div className="slottime">
+                <div className="slottime-content">
+                    <Row>
+                        <Col className="timestyle">Slot:12:30 PM</Col>
+                        <Col><h6 className="Slot-member">(1/4)</h6></Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <p className="createdby">Created by:aathavan@it</p>
+                        </Col>
+                        <Col><Link to="/SlotDetails"><Button className="Slot-Button" variant="dark" type="button">View</Button></Link></Col>
+                    </Row>
+                </div>
+            </div>
+            <div className="slottime">
+                <div className="slottime-content">
+                    <Row>
+                        <Col className="timestyle">Slot:12:30 PM</Col>
+                        <Col><h6 className="Slot-member">(1/4)</h6></Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <p className="createdby">Created by:aathavan@it</p>
+                        </Col>
+                        <Col><Link to="/SlotDetails"><Button className="Slot-Button" variant="dark" type="button">View</Button></Link></Col>
+                    </Row>
+                </div>
+            </div>
+            <div className="slottime">
+                <div className="slottime-content">
+                    <Row>
+                        <Col className="timestyle">Slot:12:30 PM</Col>
+                        <Col><h6 className="Slot-member">(1/4)</h6></Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <p className="createdby">Created by:aathavan@it</p>
+                        </Col>
+                        <Col><Link to="/SlotDetails"><Button className="Slot-Button" variant="dark" type="button">View</Button></Link></Col>
+                    </Row>
+                </div>
+            </div>
+
+           
         </div>
         <div className="plus-btn">
-          <Link to="/book"> <Button variant="light" type="button" className="btn btn-default btn-circle btn-lg">+</Button></Link>
-        </div>
-      </div>
-
-    </>
-  )
+           <Link to="/book"> <Button  variant="light" type="button" className="btn btn-default btn-circle btn-lg">+</Button></Link>
+            </div>
+            </div>
+            
+        </>
+    )
 }
 
 export default SlotBooking; 

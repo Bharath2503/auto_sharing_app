@@ -6,20 +6,26 @@ import "../css/navbar.css"
 import Image from "../assets/images/auto_clr.png";
 
 function Header() {
+    // const fullName = document.getElementById('fullName').textContent;
+    // const intials = fullName.split(' ').map(name => name[0]).join('').toUpperCase();
+    // document.getElementById('profileImage').innerHTML = intials;
     return (
         <>
             <Navbar expand="sm">
                 <Container>
                     <Navbar.Brand>
-                       <img src={Image} alt="auto" />
+                        <img src={Image} alt="auto" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="ms-auto">
                             <Link className="link hover-underline-animation" to="/">Home</Link>
                             <Link className="link hover-underline-animation" to="/about">About</Link>
-                        </Nav> 
-                        </Navbar.Collapse> 
+                            
+                        </Nav>
+                    <div id="profileImage" className='profileimage'>
+                    <span id="fullName">P</span></div>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
             <Outlet />
