@@ -1,16 +1,33 @@
 import "../css/home.css"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link } from "react-router-dom";
+import { Link, Navigate,useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import { allslots } from '../api/axios'
 import { useState, useEffect } from 'react'
+import decode from 'jwt-decode'
 import moment from 'moment'
 
 function SlotBooking() {
   const [slots, setslots] = useState();
   const [wait, setwait] = useState(false);
   const [isdata, setisdata] = useState(false);
+  const navigate=useNavigate();
+  useEffect(() => {
+    const result =  localStorage.getItem("usertoken")
+    console.log(result)
+    const token = result;
+    if (token) {
+      const decodedToken = decode(token)
+      if (!(decodedToken.exp * 1000 > new Date().getTime())) {
+        navigate('/login')
+      }
+    }
+    else{
+    console.log("token not found")
+    navigate('/login')
+    }
+  },[])
   const apicall = async () => {
     const data = await allslots()
     console.log(data)

@@ -13,7 +13,7 @@ function SlotDetails() {
   const [user, setuser] = useState()
   const [wait, setwait] = useState(false);
   const [isdata, setisdata] = useState(false);
-  const [ismember, setismember] = useState(true);
+  const [ismember, setismember] = useState(false);
   const navigate = useNavigate();
   const apicall = async () => {
     const data = await viewslot(id)

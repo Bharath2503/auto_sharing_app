@@ -6,9 +6,10 @@ export const newslot = async (data) => {
     try {
         console.log(data)
         const res = await api.post('/newslot', data);
-        console.log(res.data)
-        return res.data.messsage == 'Success' ? true : false
+        console.log(res.data.message)
+        return res.data.message === 'Success' ? true : false
     } catch (e) {
+        console.log(e)
         alert(e.response.data.message)
         return false
     }   

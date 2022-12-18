@@ -17,12 +17,13 @@ function Slot() {
     const user = await JSON.parse(localStorage.getItem('user'))
     setuserid(user._id)
     setuseremail(user.email)
-     }
+  }
   useEffect(() => {
     apicall()
 
   }, [])
-  const createslot = async () => {
+  const createslot = async (e) => {
+    e.preventDefault();
     const data = {
       time: datetime,
       capacity: capacity,
@@ -30,9 +31,10 @@ function Slot() {
       member: userid
     }
     console.log(data)
-    const result =await newslot(data) 
-    if(result){navigate('/')}
-    else alert('Someting Went Wrong')
+    const result = await newslot(data)
+    console.log(result)
+    if (result) { navigate('/') }
+    else { alert('Someting Went Wrong') }
   }
   const capcitychange = async (e) => {
     e.target.value <= 4 ? setcapacity(e.target.value) : setcapacity()
@@ -46,6 +48,7 @@ function Slot() {
         <div className="Page-Content">
           <Form.Group className="mb-1" controlId="formBasicText">
             <Form.Control
+              required
               type="datetime-local"
               placeholder="Slot Time"
               className="form-control"
@@ -55,7 +58,7 @@ function Slot() {
             />
           </Form.Group>
           <Form.Group className="mb-4" controlId="formBasicEmail">
-            <Form.Control type="number" max="4" min="1" placeholder="Max member(limit:4)" className="form-control" onChange={capcitychange} />
+            <Form.Control type="number" max="4" min="1" placeholder="Max member(limit:4)" required className="form-control" onChange={capcitychange} />
           </Form.Group>
           <div className='button-margin'>
             <Link to="/"><Button type="submit" className="back-button">Back</Button></Link>
