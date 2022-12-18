@@ -3,6 +3,9 @@ h1{
 }
 html,body{
   background-color: #99CCFF;
+}
+body::-webkit-scrollbar{ 
   overflow-x: hidden;
-  max-width: 100%;
+  overflow-y: scroll;
+  display: none;
 }

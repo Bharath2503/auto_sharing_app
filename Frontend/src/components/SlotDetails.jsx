@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import "../css/slotdetails.css";
-import { Link, redirect, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import { viewslot, joinslot ,deleteslot, leave} from '../api/axios'
 import 'font-awesome/css/font-awesome.min.css'
@@ -22,9 +22,9 @@ function SlotDetails() {
     console.log(userdata.email)
     setuser(userdata)
     setslot(data)
-    data.members.map(ele => {
-      ele.email == userdata.email ? setismember(true) : <> </>
-    })
+    data.members.map(ele => (
+      ele.email === userdata.email ? setismember(true) : <> </>
+    ))
     setisdata(true)
   }
 
@@ -77,14 +77,14 @@ function SlotDetails() {
           {ismember ? 
           slot.email==user.email?
             <>
-              <Button type="submit" variant='danger' onClick={leaveslot} className='SlotLeaveButton'>Leave</Button>
-              <Button type="submit" variant='danger' onClick={deleteslots} className='SlotLeaveButton'>Delete</Button>
+              <Button type="submit" variant='danger' onClick={leaveslot} className='UserLeaveButton'>Leave</Button>
+              <Button type="submit" variant='danger' onClick={deleteslots} className='UserDeleteButton'>Delete</Button>
             </>:
-            <Button type="submit" variant='danger' onClick={leaveslot} className='SlotLeaveButton'>Leave</Button>
+            <Button type="submit" variant='danger' onClick={leaveslot} className='LeaveButton'>Leave</Button>
 
             :slot.members.length!=slot.capacity?
-            <Button type="submit" variant='dark' onClick={book} className='SlotLeaveButton'>Book</Button>
-            :<h2>Slot Full</h2>
+            <Button type="submit" variant='dark' onClick={book} className='SlotBookButton'>Book</Button>
+            :<h4 className='slotfull'>Slot Full</h4>
           } </>
 
         }

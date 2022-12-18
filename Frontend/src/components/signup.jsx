@@ -113,7 +113,7 @@ function Signup() {
                             <Form.Control className="form-control"
                                 name="password"
                                 type="password" required
-                                minlength="6"
+                                minLength="6"
                                 onChange={handle_password}
                                 placeholder="Password"
                             />

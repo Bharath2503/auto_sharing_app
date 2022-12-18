@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import moment from "moment"
 import "../css/createslot.css";
 import { useEffect, useState } from 'react'

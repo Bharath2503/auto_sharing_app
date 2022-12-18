@@ -1,18 +1,29 @@
 import "../css/home.css"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import { allslots } from '../api/axios'
 import { useState, useEffect } from 'react'
 import decode from 'jwt-decode'
 import moment from 'moment'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+
 
 function SlotBooking() {
   const [slots, setslots] = useState();
   const [wait, setwait] = useState(false);
   const [isdata, setisdata] = useState(false);
   const navigate = useNavigate();
+
+   // tooltip
+   const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Create New Slot
+    </Tooltip>
+  );
+
   useEffect(() => {
     const result = localStorage.getItem("usertoken")
     console.log(result)
@@ -51,6 +62,7 @@ function SlotBooking() {
       <div className="container">
         <div className="SlotBook-page">
           <h4 className="slottitle">Slot Timings</h4>
+          <p style={{textAlign:'center',color:'white'}}>Scroll Down To See Full Slot Timings</p>
 
           {wait && slots.map(ele => (
             <div className="slottime" key={ele._id}>
@@ -73,7 +85,15 @@ function SlotBooking() {
           ))}
         </div>
         <div className="plus-btn">
-          <Link to="/book"> <Button variant="light" type="button" className="btn btn-default btn-circle btn-lg">+</Button></Link>
+          <Link to="/book">
+            <OverlayTrigger
+              placement="top"
+              delay={{ show: 0, hide: 100 }}
+              overlay={renderTooltip}>
+             <Button variant="light" type="button" className="btn btn-default btn-circle btn-lg">+</Button>
+             </OverlayTrigger>
+             </Link>
+            
         </div>
 
 
