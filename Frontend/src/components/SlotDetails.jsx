@@ -82,7 +82,9 @@ function SlotDetails() {
             </>:
             <Button type="submit" variant='danger' onClick={leaveslot} className='SlotLeaveButton'>Leave</Button>
 
-            :<Button type="submit" variant='dark' onClick={book} className='SlotLeaveButton'>Book</Button>
+            :slot.members.length!=slot.capacity?
+            <Button type="submit" variant='dark' onClick={book} className='SlotLeaveButton'>Book</Button>
+            :<h2>Slot Full</h2>
           } </>
 
         }

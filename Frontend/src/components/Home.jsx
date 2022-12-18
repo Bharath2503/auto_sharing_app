@@ -63,7 +63,7 @@ function SlotBooking() {
                     <p className="createdby">Created by:{ele.email}</p>
                   </Col>
                   <Col>
-                    {ele.members.length == ele.capacity ? <h2>Slot Full</h2> : <Link to={{ pathname: `/slotdetails/${ele._id}` }} ><Button className="Slot-Button" variant="dark" type="button">View</Button></Link>}</Col>
+                    <Link to={{ pathname: `/slotdetails/${ele._id}` }} ><Button className="Slot-Button" variant="dark" type="button">View</Button></Link></Col>
                 </Row>
               </div>
 
