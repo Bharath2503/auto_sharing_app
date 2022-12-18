@@ -1,11 +1,10 @@
-import Spinner from 'react-bootstrap/Spinner';
-
-function BasicExample() {
+import preloader from "../assets/preloader/pre_auto1.gif";
+function Preloader() {
   return (
-    <Spinner animation="border" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </Spinner>
+    <div>
+      <img src={preloader} alt="Loding" />
+    </div>
   );
 }
 
-export default BasicExample;
+export default Preloader;
