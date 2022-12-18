@@ -42,7 +42,7 @@ function Header() {
                             
                         </Nav>
                     <div id="profileImage" className='profileimage' title='Logout' onClick={logout}>
-                    <span id="fullName">{firstletter[0].toUpperCase()}</span></div>
+                    <span id="fullName">{firstletter[0]}</span></div>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
