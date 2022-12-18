@@ -1,7 +1,7 @@
 import "../css/home.css"
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link, Navigate,useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import { allslots } from '../api/axios'
 import { useState, useEffect } from 'react'
@@ -12,9 +12,9 @@ function SlotBooking() {
   const [slots, setslots] = useState();
   const [wait, setwait] = useState(false);
   const [isdata, setisdata] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
-    const result =  localStorage.getItem("usertoken")
+    const result = localStorage.getItem("usertoken")
     console.log(result)
     const token = result;
     if (token) {
@@ -23,11 +23,11 @@ function SlotBooking() {
         navigate('/login')
       }
     }
-    else{
-    console.log("token not found")
-    navigate('/login')
+    else {
+      console.log("token not found")
+      navigate('/login')
     }
-  },[])
+  }, [])
   const apicall = async () => {
     const data = await allslots()
     console.log(data)
@@ -62,7 +62,8 @@ function SlotBooking() {
                   <Col>
                     <p className="createdby">Created by:{ele.email}</p>
                   </Col>
-                  <Col><Link to={{ pathname: `/slotdetails/${ele._id}` }} ><Button className="Slot-Button" variant="dark" type="button">View</Button></Link></Col>
+                  <Col>
+                    {ele.members.length == ele.capacity ? <h2>Slot Full</h2> : <Link to={{ pathname: `/slotdetails/${ele._id}` }} ><Button className="Slot-Button" variant="dark" type="button">View</Button></Link>}</Col>
                 </Row>
               </div>
 
