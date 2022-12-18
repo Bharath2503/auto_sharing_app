@@ -17,8 +17,8 @@ function SlotBooking() {
   const [isdata, setisdata] = useState(false);
   const navigate = useNavigate();
 
-   // tooltip
-   const renderTooltip = (props) => (
+  // tooltip
+  const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
       Create New Slot
     </Tooltip>
@@ -40,7 +40,7 @@ function SlotBooking() {
     }
   }, [])
   const apicall = async () => {
-    const user=await JSON.parse(localStorage.getItem('user'))
+    const user = await JSON.parse(localStorage.getItem('user'))
     const data = await allslots(user.gender)
     console.log(data)
     setslots(data)
@@ -62,22 +62,36 @@ function SlotBooking() {
       <div className="container">
         <div className="SlotBook-page">
           <h4 className="slottitle">Slot Timings</h4>
-          <p style={{textAlign:'center',color:'white'}}>Scroll Down To See Full Slot Timings</p>
+          <p style={{ textAlign: 'center', color: 'white' }}>Scroll Down To See Full Slot Timings</p>
 
           {wait && slots.map(ele => (
             <div className="slottime" key={ele._id}>
               <div className="slottime-content">
                 <Row>
                   <Col className="timestyle">Slot:{moment(ele.time).format('hh:mm a')}</Col>
-                  <Col><h6 className="Slot-member">({ele.members.length}/{ele.capacity})</h6></Col>
+                  <Col>
+                    {ele.members.length == ele.capacity ?
+                      <h6 className="Slot-member" style={{ color: 'red' }}>({ele.members.length}/{ele.capacity})</h6>
+                      :
+                      <h6 className="Slot-member" style={{ color: 'black' }}>({ele.members.length}/{ele.capacity})</h6>
+                    }
+                  </Col>
                 </Row>
                 <Row>
                   <Col>
                     <p className="createdby">Created by:{ele.email}</p>
                   </Col>
                   <Col>
-                    <Link to={{ pathname: `/slotdetails/${ele._id}` }} ><Button className="Slot-Button" variant="dark" type="button">View</Button></Link></Col>
+                    <Link to={{ pathname: `/slotdetails/${ele._id}` }}>
+                      <Button className="Slot-Button" variant="dark" type="button">View</Button>
+                    </Link>
+                  </Col>
                 </Row>
+                {ele.destination == 'p-k' ?
+                  <p className="place">{moment(ele.time).format('D/M/YYYY')}  |  Perundurai  &#8594;  KEC</p>
+                  :
+                  <p className="place">{moment(ele.time).format('D/M/YYYY')}  |  KEC &#8594; Perundurai</p>
+                }
               </div>
 
 
@@ -90,10 +104,10 @@ function SlotBooking() {
               placement="top"
               delay={{ show: 0, hide: 100 }}
               overlay={renderTooltip}>
-             <Button variant="light" type="button" className="btn btn-default btn-circle btn-lg">+</Button>
-             </OverlayTrigger>
-             </Link>
-            
+              <Button variant="light" type="button" className="btn btn-default btn-circle btn-lg">+</Button>
+            </OverlayTrigger>
+          </Link>
+
         </div>
 
 

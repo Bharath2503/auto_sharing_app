@@ -41,17 +41,19 @@
 
 .createdby {
     font-size: 15px;
-    padding: 1%;
+    margin-top: 4%;
 }
 
 .Slot-Button {
     background-color:#222222ed!important;
     --bs-btn-border-color: #ffffff;
     float: right;
+    margin-top: 4%;
 }
 
 .Slot-member {
     float: right;
+    margin-right: 2%;
 }
 
 .slottime-content {
@@ -80,4 +82,7 @@
 }
 .btn-circle:hover{
     background-color: #058240;
+}
+.home{
+    margin-top: -5px;
 }

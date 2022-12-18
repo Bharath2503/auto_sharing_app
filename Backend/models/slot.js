@@ -18,6 +18,10 @@ const slotSchema = new Schema({
         type: String,
         required: true
     },
+    destination:{
+        type:String,
+        required:true
+    },
     members:{ 
     type:[{
         type: mongoose.Schema.Types.ObjectId, ref: 'User', 

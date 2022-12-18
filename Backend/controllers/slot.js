@@ -3,8 +3,8 @@ const User=require("../models/user")
 const moment=require("moment")
 
 module.exports.newslot = async (req, res) => {
-    var { time, capacity, email, member, gender } = req.body;
-    const newslot = new Slot({ time, capacity, email, gender });
+    var { time, capacity, email, member, gender,destination } = req.body;
+    const newslot = new Slot({ time, capacity, email, gender ,destination});
     newslot.members.push(member)
    await newslot.save();
     console.log(newslot);

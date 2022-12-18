@@ -13,6 +13,7 @@ function Slot() {
   const [useremail, setuseremail] = useState();
   const [usergender, setusergender] = useState();
   const [userid, setuserid] = useState();
+  const [destination , setdestination] = useState("");
   const navigate = useNavigate();
   const apicall = async () => {
     const user = await JSON.parse(localStorage.getItem('user'))
@@ -31,7 +32,8 @@ function Slot() {
       capacity: capacity,
       email: useremail,
       member: userid,
-      gender:usergender
+      gender: usergender,
+      destination:destination
     }
     console.log(data)
     const result = await newslot(data)
@@ -45,8 +47,8 @@ function Slot() {
   return (
 
 
-    <div className="FullPage">
-      <Form className="Form" autoComplete='off'>
+    <div className="createslot">
+      <Form className="createslotForm" autoComplete='off'>
         <h4 className="Title">Create New Slot</h4>
         <div className="Page-Content">
           <Form.Group className="mb-1" controlId="formBasicText">
@@ -63,6 +65,11 @@ function Slot() {
           <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Control type="number" max="4" min="1" placeholder="Max member(limit:4)" required className="form-control" onChange={capcitychange} />
           </Form.Group>
+          <Form.Select className="mb-1 form-control" onChange={(e) => setdestination(e.target.value)} aria-label="Default select example" name="destination">
+                            <option selected disabled value='-'>Select Destination</option>
+                            <option value="k-p">KEC to Perundurai</option>
+                            <option value="p-k">Perundurai to KEC</option>
+                        </Form.Select>
           <div className='button-margin'>
             <Link to="/"><Button type="submit" className="back-button">Back</Button></Link>
             <Button type="submit" className="create-button" onClick={createslot}>Create</Button>
