@@ -6,7 +6,7 @@ module.exports.newslot = async(req,res)=>{
     newslot.members.push(member)
    await newslot.save();
     console.log(newslot);
-    res.send("Slot Created");
+    res.status(200).json({message:"Success"})
 }
 
 module.exports.slots = async(req,res)=>{

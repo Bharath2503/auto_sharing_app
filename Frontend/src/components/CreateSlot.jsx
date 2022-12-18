@@ -1,14 +1,44 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import moment from "moment"
 import "../css/createslot.css";
-import { useState } from 'react'
-
+import { useEffect, useState } from 'react'
+import { newslot } from '../api/axios'
+import { useNavigate } from 'react-router-dom'
 
 function Slot() {
   const [datetime, settime] = useState();
+  const [capacity, setcapacity] = useState();
+  const [useremail, setuseremail] = useState();
+  const [userid, setuserid] = useState();
+  const navigate = useNavigate();
+  const apicall = async () => {
+    const user = await JSON.parse(localStorage.getItem('user'))
+    setuserid(user._id)
+    setuseremail(user.email)
+     }
+  useEffect(() => {
+    apicall()
+
+  }, [])
+  const createslot = async () => {
+    const data = {
+      time: datetime,
+      capacity: capacity,
+      email: useremail,
+      member: userid
+    }
+    console.log(data)
+    const result =await newslot(data) 
+    if(result){navigate('/')}
+    else alert('Someting Went Wrong')
+  }
+  const capcitychange = async (e) => {
+    e.target.value <= 4 ? setcapacity(e.target.value) : setcapacity()
+  }
   return (
+
 
     <div className="FullPage">
       <Form className="Form" autoComplete='off'>
@@ -25,11 +55,11 @@ function Slot() {
             />
           </Form.Group>
           <Form.Group className="mb-4" controlId="formBasicEmail">
-            <Form.Control type="number" max="4" min="0"  placeholder="Max member(limit:4)" className="form-control"  />
+            <Form.Control type="number" max="4" min="1" placeholder="Max member(limit:4)" className="form-control" onChange={capcitychange} />
           </Form.Group>
           <div className='button-margin'>
             <Link to="/"><Button type="submit" className="back-button">Back</Button></Link>
-            <Link to="/SlotDetails"><Button type="submit" className="create-button">Create</Button></Link>
+            <Button type="submit" className="create-button" onClick={createslot}>Create</Button>
           </div>
         </div>
       </Form>
