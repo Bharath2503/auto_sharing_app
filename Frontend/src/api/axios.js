@@ -14,9 +14,10 @@ export const newslot = async (data) => {
         return false
     }   
 }
-export const allslots = async () => {
+export const allslots = async (gender) => {
     try {
-        const res = await api.get('/slots')
+        console.log(gender)
+        const res = await api.get(`/slots/${gender}`)
         console.log(res.data)
         return res.data
     } catch (e) {

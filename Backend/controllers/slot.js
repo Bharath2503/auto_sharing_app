@@ -1,9 +1,10 @@
 const Slot = require("../models/slot");
+const User=require("../models/user")
 const moment=require("moment")
 
 module.exports.newslot = async (req, res) => {
-    var { time, capacity, email, member } = req.body;
-    const newslot = new Slot({ time, capacity, email });
+    var { time, capacity, email, member, gender } = req.body;
+    const newslot = new Slot({ time, capacity, email, gender });
     newslot.members.push(member)
    await newslot.save();
     console.log(newslot);
@@ -13,11 +14,9 @@ module.exports.newslot = async (req, res) => {
 module.exports.slots = async (req, res) => {
     //today
     const today =  moment().format('YYYY-MM-DThh:mm')
-    console.log(today)
     //tomorrow timestamp
     const tomorrow = moment().add('1', 'days').format('YYYY-MM-DThh:mm');
-    console.log(tomorrow)
-    var slots = await Slot.find({ time: { $lte: tomorrow, $gt: today } }).sort({"time":1})
+    var slots = await Slot.find({ $and: [ { gender: req.params.gender }, { time: { $gt: today } }] }).sort({"time":1})
     res.status(200).json(slots)
 }
 

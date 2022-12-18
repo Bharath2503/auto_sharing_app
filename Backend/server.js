@@ -29,7 +29,7 @@ app.post("/user/login",login);
 //slots
 app.post("/newslot",newslot);
 
-app.get("/slots",slots);
+app.get("/slots/:gender",slots);
 
 app.get("/viewslot/:slotid",viewslot);
 

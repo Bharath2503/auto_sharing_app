@@ -29,7 +29,8 @@ function SlotBooking() {
     }
   }, [])
   const apicall = async () => {
-    const data = await allslots()
+    const user=await JSON.parse(localStorage.getItem('user'))
+    const data = await allslots(user.gender)
     console.log(data)
     setslots(data)
     setisdata(true)

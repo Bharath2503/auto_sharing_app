@@ -11,11 +11,13 @@ function Slot() {
   const [datetime, settime] = useState();
   const [capacity, setcapacity] = useState();
   const [useremail, setuseremail] = useState();
+  const [usergender, setusergender] = useState();
   const [userid, setuserid] = useState();
   const navigate = useNavigate();
   const apicall = async () => {
     const user = await JSON.parse(localStorage.getItem('user'))
     setuserid(user._id)
+    setusergender(user.gender)
     setuseremail(user.email)
   }
   useEffect(() => {
@@ -28,7 +30,8 @@ function Slot() {
       time: datetime,
       capacity: capacity,
       email: useremail,
-      member: userid
+      member: userid,
+      gender:usergender
     }
     console.log(data)
     const result = await newslot(data)
