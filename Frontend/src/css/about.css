@@ -1,29 +1,23 @@
-.aboutpage{
-    justify-content: center;
-    align-items: center;
-    height:125vh;
-    width:39%;
-    margin-left: 30%;
-    background-color:rgba(231, 231, 231, 0.9);
-    padding-bottom: 5%;
-    margin-bottom: 20px;
-    border-radius:1%;
+.aboutpage {
+    background-color: bisque;
 }
 
-.aboutimage{
-    width:auto;
-    height:auto;
-    margin-left: -2.2%;
-    margin-bottom: 5%;
-    border-radius: 1% 1% 0 0;
+.aboutimage {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    border-radius: 1% 1% 1% 1%;
 }
-.aboutttitle{
+
+.aboutttitle {
     text-align: center;
-    font-size:30px;
-    font-family:cursive;
+    font-size: 30px;
+    font-family: cursive;
     font-weight: bold;
 }
-.aboutpara{
+
+.aboutpara {
     font-family: cursive;
     font-size: larger;
     letter-spacing: 1px;
@@ -31,5 +25,5 @@
     line-height: 35px;
     padding: 1% 5% 1% 5%;
     text-align: justify;
-    
+
 }
